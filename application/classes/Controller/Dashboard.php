@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 # application/classes/Controller/Page.php
-class Controller_Page extends Controller_Template_Generic
+class Controller_Dashboard extends Controller_Template_Generic
 {
     public $template = 'main';
 
@@ -14,9 +14,6 @@ class Controller_Page extends Controller_Template_Generic
 	    //HTTP::redirect('dbauth/login');
     }
 
-    public function action_new()
-    {
-	$this->template->content = View::factory('edit');
-    }
+    
 }
     

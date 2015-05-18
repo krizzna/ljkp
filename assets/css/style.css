@@ -1,13 +1,16 @@
-/* Login Form CSS
- *
- *
+/*
+ * Base structure
  */
-body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  /*background-color: #eee;*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body { padding-top: 50px; }
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
 }
 
+/* Form Signin */
 .form-signin {
   max-width: 330px;
   padding: 15px;
@@ -43,36 +46,6 @@ body {
   border-top-right-radius: 0;
 }
 
-/* Main CSS
- *
- */
-/*
- * Base structure
- */
-
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 50px;
-}
-
-
-/*
- * Global add-ons
- */
-
-.sub-header {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
-.navbar-fixed-top {
-  border: 0;
-}
-
 /*
  * Sidebar
  */
@@ -92,131 +65,17 @@ body {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
+    /*background-color: #f5f5f5;*/
+    background: url('../img/bg/shattered.png');
     border-right: 1px solid #eee;
   }
 }
-
-/* Sidebar navigation */
-.nav-sidenav ul {
-    list-style: none;
-    padding: 0px;
+.sidebar img {
+  width: 185px;
 }
-.nav-sidenav > li.first {
-    border-left: 5px solid #a58fc4;
-}
-.nav-sidenav > li.second {
-    border-left: 5px solid #58c5c7;
-}
-.nav-sidenav > li.third {
-    border-left: 5px solid #915f13;
-}
-.nav-sidenav > li.fourth {
-    border-left: 5px solid #b6cf2f;
-}
-.nav-sidenav > li.fifth {
-    border-left: 5px solid #fdb731;
-}
-.nav-sidenav > li.sixth {
-    border-left: 5px solid #00aef0;
-}
-.nav-sidenav li.divider {
-    border-bottom: 1px solid #e6e6e6;
-}
-.nav-sidenav > li {
-    margin: 1px 0px;
-}
-.nav-sidenav > li.sidenav-active-background {
-    background-color: #e6e6e6;
-}
-.nav-sidenav li a {
-    color: #4d4d4f;
-    display: block;
-    text-decoration: none;
-    outline: none;
-}
-.nav-sidenav li li a {
-    padding: 5px 25px;
-}
-.nav-sidenav li li li a {
-    padding: 5px 35px;
-}
-.nav-sidenav li a:hover, .nav-sidenav li a:focus {
-    background-color: #d1d1d1;
-}
-
-/*
- * Side navigation
- *
- * Scrollspy and affixed enhanced navigation to highlight sections and secondary
- * sections of docs content.
- */
-
-/* By default it's not affixed in mobile views, so undo that */
-.bs-docs-sidebar.affix {
-  position: static;
-}
-@media (min-width: 768px) {
-  .bs-docs-sidebar {
-    padding-left: 20px;
-  }
-}
-
-/* First level of nav */
-.bs-docs-sidenav {
-  margin-top: 20px;
+.sidebar-logo {
   margin-bottom: 20px;
 }
-
-/* All levels of nav */
-.bs-docs-sidebar .nav > li > a {
-  display: block;
-  padding: 4px 20px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #767676;
-}
-.bs-docs-sidebar .nav > li > a:hover,
-.bs-docs-sidebar .nav > li > a:focus {
-  padding-left: 19px;
-  color: #563d7c;
-  text-decoration: none;
-  background-color: transparent;
-  border-left: 1px solid #563d7c;
-}
-.bs-docs-sidebar .nav > .active > a,
-.bs-docs-sidebar .nav > .active:hover > a,
-.bs-docs-sidebar .nav > .active:focus > a {
-  padding-left: 18px;
-  font-weight: bold;
-  color: #563d7c;
-  background-color: transparent;
-  border-left: 2px solid #563d7c;
-}
-
-/* Nav: second level (shown on .active) */
-.bs-docs-sidebar .nav .nav {
-  display: none; /* Hide by default, but at >768px, show it */
-  padding-bottom: 10px;
-}
-.bs-docs-sidebar .nav .nav > li > a {
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-left: 30px;
-  font-size: 12px;
-  font-weight: normal;
-}
-.bs-docs-sidebar .nav .nav > li > a:hover,
-.bs-docs-sidebar .nav .nav > li > a:focus {
-  padding-left: 29px;
-}
-.bs-docs-sidebar .nav .nav > .active > a,
-.bs-docs-sidebar .nav .nav > .active:hover > a,
-.bs-docs-sidebar .nav .nav > .active:focus > a {
-  padding-left: 28px;
-  font-weight: 500;
-}
-
 
 /*
  * Main content
@@ -224,6 +83,8 @@ body {
 
 .main {
   padding: 20px;
+  /*background: url('../img/bg/shattered.png');*/
+  
 }
 @media (min-width: 768px) {
   .main {
@@ -235,41 +96,34 @@ body {
   margin-top: 0;
 }
 
-
 /*
- * Placeholder dashboard ideas
+ * Page Header
  */
 
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.placeholders h4 {
-  margin-bottom: 0;
-}
-.placeholder {
-  margin-bottom: 20px;
-}
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
+.main-header {
+  background: #eeeeee; /* Old browsers */
+  background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+
 }
 
-/*
- * TABLE
+.page-header h2 {
+  margin-bottom: 30px
+}
+
+/* TABLE
+ *
  */
-th { text-align: center; }
 
-tbody td {
-    border-width: 0 !important;
-    padding-top:0 !important;
-}
-
-tbody tr th ~ td {
-    border-top-width: 1px !important;
-    padding-top:8px !important;
-}
-
-tbody tr td:first-of-type {
-    border-left-width: 1px !important;
+table,
+thead,
+tr,
+tbody,
+th {
+    text-align: center;
 }
